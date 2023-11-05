@@ -1,0 +1,29 @@
+{
+	"name": "bot",
+	"private": true,
+	"main": "dist/src/index.js",
+	"type": "module",
+	"scripts": {
+		"olddev": "pnpm run clean && tsc -b -w && cross-env NODE_ENV=development node .",
+		"dev": "pnpm run clean && cross-env NODE_ENV=development tsc-watch --onSuccess \"node .\"",
+		"build": "pnpm run clean && tsc -b",
+		"start": "cross-env NODE_ENV=production node .",
+		"lint": "eslint . --ext .ts --fix",
+		"clean": "rimraf dist turbo-*.log --glob"
+	},
+	"dependencies": {
+		"@buape/functions": "^1.0.1",
+		"@buape/lib": "^1.0.6",
+		"@internal/config": "workspace:*",
+		"@internal/database": "workspace:*",
+		"@internal/logger": "workspace:*",
+		"@sapphire/stopwatch": "^1.5.0",
+		"croner": "^7.0.1",
+		"discord.js": "^14.13.0"
+	},
+	"devDependencies": {
+		"@types/ms": "^0.7.31",
+		"@types/node": "^18.17.18",
+		"tsconfig": "workspace:*"
+	}
+}

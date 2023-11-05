@@ -1,0 +1,27 @@
+{
+	"name": "api",
+	"private": true,
+	"main": "dist/src/index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm run clean && cross-env NODE_ENV=development tsc-watch --onSuccess \"node .\"",
+		"build": "pnpm run clean && tsc -b",
+		"start": "cross-env NODE_ENV=production node .",
+		"lint": "eslint . --ext .ts --fix",
+		"clean": "rimraf dist turbo-*.log --glob"
+	},
+	"dependencies": {
+		"@buape/functions": "^1.0.1",
+		"@internal/config": "workspace:*",
+		"@internal/logger": "workspace:*",
+		"@types/express": "^4.17.17",
+		"cors": "^2.8.5",
+		"discord.js": "^14.13.0",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.14",
+		"@types/node": "^18.17.18",
+		"tsconfig": "workspace:*"
+	}
+}

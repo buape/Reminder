@@ -1,0 +1,22 @@
+{
+    "name": "eslint-config-custom",
+    "private": true,
+    "version": "0.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "^6.7.2",
+        "eslint": "^8.49.0",
+        "eslint-config-next": "13.5.3",
+        "eslint-config-prettier": "^8.10.0",
+        "eslint-config-turbo": "latest",
+        "eslint-plugin-react": "7.33.2"
+    },
+    "devDependencies": {
+        "typescript": "^5.2.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
