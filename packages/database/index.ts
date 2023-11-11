@@ -6,3 +6,4 @@ export default database
 export * from "@prisma/client"
 
 export * from "./src/getData.js"
+export * from "./src/reminders.js"

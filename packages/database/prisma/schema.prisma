@@ -15,6 +15,7 @@ model User {
   updatedAt DateTime @updatedAt
 
   guildData UserGuildData[]
+  reminders Reminder[]
 }
 
 model Guild {
@@ -48,4 +49,19 @@ model Kv {
   updatedAt DateTime @updatedAt
 
   @@unique([guildId, key])
+}
+
+model Reminder {
+  id        String   @default(uuid()) @id
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  channelId String? @default("")
+  message   String
+  originalTime String?
+  time      BigInt
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
 }

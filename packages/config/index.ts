@@ -15,7 +15,7 @@ const accessSettings: AccessSettings = {
 }
 
 const colors = {
-	primary: 0xd8833b,
+	primary: 0x6472e0,
 	success: 0x57f287,
 	warning: 0xfee75c,
 	error: 0xed4245,
