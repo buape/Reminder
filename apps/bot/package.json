@@ -24,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@types/ms": "^0.7.31",
-		"@types/node": "^18.17.18",
+		"@types/node": "^20.0.0",
 		"@types/timestring": "^6.0.5",
 		"tsconfig": "workspace:*"
 	}

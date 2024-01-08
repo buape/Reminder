@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.14",
-		"@types/node": "^18.17.18",
+		"@types/node": "^20.0.0",
 		"tsconfig": "workspace:*"
 	}
 }
